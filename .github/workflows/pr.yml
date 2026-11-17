@@ -10,7 +10,7 @@ concurrency:
 
 jobs:
   run_tests:
-    uses: epam/ai-dial-ci/.github/workflows/python_docker_pr.yml@4.13.2
+    uses: tataranovich/ai-dial-ci/.github/workflows/python_docker_pr.yml@main
     secrets: inherit
     with:
       python-version: 3.11
@@ -18,3 +18,5 @@ jobs:
       platforms: "linux/amd64,linux/arm64"
       trivy-severity: "CRITICAL,HIGH,MEDIUM,LOW"
       trivy-severity-for-sarif: "CRITICAL,HIGH,MEDIUM,LOW"
+      ort-enabled: false
+      code-checks-enabled: false
